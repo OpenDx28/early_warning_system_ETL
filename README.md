@@ -87,4 +87,4 @@ Dhis2
 ### Conexiones
 En nuestro container tenemos un csv llamado datacon.csv en el cual esta toda la inforamcion sobre la conexion a nuestro server de tryton
 
-
+![Datacon.csv](assets/Captura.PNG)
