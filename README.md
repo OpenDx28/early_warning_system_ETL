@@ -91,4 +91,14 @@ En nuestro container tenemos un csv llamado datacon.csv en el cual esta toda la 
 
 ### DHIS2
 Puede ocurrir que se necesite meter el metadata de dhis2 una vez recien levantado el container, entonces deberiamos de entrar en dhis2 e insertar los ficheros que tenemos en al carpeta
-metadata e introducirlo en su orden en la siguiente 
+metadata e introducirlo en su orden.
+
+En el panel de la derecha debemos buscar Import/export y clicamos
+
+![Datacon.csv](assets/panel.PNG)
+
+una vez dentro en el apartado de metadata import, no saldrá una ventana como esta, ahora debemos ir selecionando los ficheros uno a uno y dandole a upload file
+
+![Datacon.csv](assets/meta.PNG)
+
+Cuando hayamos terminado podremso observar que se cargar varios dashboard y tenemos algunos dataset,orgunit,dataelement,etc...
