@@ -85,6 +85,10 @@ Dhis2
 
 ## Container_etl
 ### Conexiones
-En nuestro container tenemos un csv llamado datacon.csv en el cual esta toda la inforamcion sobre la conexion a nuestro server de tryton
+En nuestro container tenemos un csv llamado datacon.csv en el cual esta toda la inforamcion sobre la conexion a nuestro server de tryton y DHIS2
 
 ![Datacon.csv](assets/Captura.PNG)
+
+### DHIS2
+Puede ocurrir que se necesite meter el metadata de dhis2 una vez recien levantado el container, entonces deberiamos de entrar en dhis2 e insertar los ficheros que tenemos en al carpeta
+metadata e introducirlo en su orden en la siguiente 
