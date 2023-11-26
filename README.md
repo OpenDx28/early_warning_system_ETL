@@ -1,7 +1,7 @@
 # Early_warning_system_ETL
 
 ## About the Project
-In this project a Demo is presented, which shows as an example an ETL process in which we use ```GNU-Health`` as data source and ```DHIS2``` as destination.
+In this project a Demo is presented, which shows as an example an ETL process in which we use ```GNU-Health``` as data source and ```DHIS2``` as destination.
 
 ## Notas
 This repository originates from two different GNU-Health servers which aim to simulate the data of two Faculties.
@@ -23,7 +23,7 @@ The versions of the libraries used were the latest currently available:
 - Json
 
 ## Getting Started
-To start using this demo we need to create images of the ``GNU-Health Client``, Tryton server, Postgres database and DHIS2.
+To start using this demo we need to create images of the ```GNU-Health Client, Tryton server, Postgres database and DHIS2```.
 
 
 To build the **Tryton Server** image, the following statement will be entered:
@@ -78,7 +78,7 @@ docker exec -it etl_container-1 python main.py
 From the windows docker desktop itself we have an option to start and shut down the compose we have, from there we go into each of them and we can click on a link that will open the interfaces mentioned above.
 
 
-### credentials:
+### Credentials:
 
 ```
 gnu-client
