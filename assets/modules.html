@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulos &mdash; documentación de Proyecto itc_etl - 1.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=4936afed"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Documentación técnica ITC_ETL" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Proyecto itc_etl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Módulos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-connection">1. Conexión BBDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connection.all_connec"><code class="docutils literal notranslate"><span class="pre">all_connec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connection.connect_to_gnu"><code class="docutils literal notranslate"><span class="pre">connect_to_gnu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-get_info">2. Info proyecto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.addDataValue"><code class="docutils literal notranslate"><span class="pre">addDataValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.add_data"><code class="docutils literal notranslate"><span class="pre">add_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getDataElementInfoByName"><code class="docutils literal notranslate"><span class="pre">getDataElementInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getDataSetInfoByName"><code class="docutils literal notranslate"><span class="pre">getDataSetInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getOrgUnitInfoByName"><code class="docutils literal notranslate"><span class="pre">getOrgUnitInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-etl">3. ETL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-etl_functions">3.1 Funciones ETL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dict_in_list"><code class="docutils literal notranslate"><span class="pre">dict_in_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_death"><code class="docutils literal notranslate"><span class="pre">info_death()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_disease"><code class="docutils literal notranslate"><span class="pre">info_disease()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.new_dict"><code class="docutils literal notranslate"><span class="pre">new_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.rows_tolist"><code class="docutils literal notranslate"><span class="pre">rows_tolist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.trans_dict"><code class="docutils literal notranslate"><span class="pre">trans_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-main">3. Main</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Proyecto itc_etl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Módulos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modulos">
+<h1>Módulos<a class="headerlink" href="#modulos" title="Link to this heading"></a></h1>
+<section id="module-connection">
+<span id="conexion-bbdd"></span><h2>1. Conexión BBDD<a class="headerlink" href="#module-connection" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="connection.all_connec">
+<span class="sig-prename descclassname"><span class="pre">connection.</span></span><span class="sig-name descname"><span class="pre">all_connec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/connection.html#all_connec"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#connection.all_connec" title="Link to this definition"></a></dt>
+<dd><p>Realiza conexiones a múltiples bases de datos GNU Health y obtiene registros de modelos específicos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connections</strong> (<em>list</em>) – Una lista de tuplas que contienen información de conexión para cada base de datos.</p></li>
+<li><p><strong>modelos</strong> (<em>list</em>) – Una lista de nombres de modelos de los que se desean obtener registros.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista que contiene registros de modelos para cada conexión realizada.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="connection.connect_to_gnu">
+<span class="sig-prename descclassname"><span class="pre">connection.</span></span><span class="sig-name descname"><span class="pre">connect_to_gnu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dbname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/connection.html#connect_to_gnu"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#connection.connect_to_gnu" title="Link to this definition"></a></dt>
+<dd><p>Establece una conexión a una base de datos GNU Health.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<em>str</em>) – Nombre de usuario para la conexión.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Contraseña para la conexión.</p></li>
+<li><p><strong>dbname</strong> (<em>str</em>) – Nombre de la base de datos.</p></li>
+<li><p><strong>hostname</strong> (<em>str</em>) – Nombre del host o dirección IP del servidor.</p></li>
+<li><p><strong>port</strong> (<em>str</em>) – Puerto para la conexión.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Objeto de configuración para la conexión establecida.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>config</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-get_info">
+<span id="info-proyecto"></span><h2>2. Info proyecto<a class="headerlink" href="#module-get_info" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.addDataValue">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">addDataValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DataSetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OrgUnitName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DataValueSets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#addDataValue"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.addDataValue" title="Link to this definition"></a></dt>
+<dd><p>Agrega valores de datos a un conjunto de datos en una unidad organizativa específica.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DataSetName</strong> (<em>str</em>) – Nombre del conjunto de datos al que se agregarán los valores.</p></li>
+<li><p><strong>OrgUnitName</strong> (<em>str</em>) – Nombre de la unidad organizativa a la que se agregarán los valores.</p></li>
+<li><p><strong>DataValueSets</strong> (<em>str</em>) – Conjunto de valores de datos en formato JSON.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.add_data">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">add_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pacientes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#add_data"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.add_data" title="Link to this definition"></a></dt>
+<dd><p>Agrega datos a través de un conjunto de pacientes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pacientes</strong> (<em>list</em>) – Una lista de pacientes con información específica.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getDataElementInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getDataElementInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getDataElementInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getDataElementInfoByName" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar elementos de datos</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre un elemento de datos específico filtrado por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getDataSetInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getDataSetInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getDataSetInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getDataSetInfoByName" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar conjuntos de datos</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre un conjunto de datos específico filtrado por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getOrgUnitInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getOrgUnitInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getOrgUnitInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getOrgUnitInfoByName" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar unidades organizativas</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre una unidad organizativa específica filtrada por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.login">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#login"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.login" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-etl">
+<span id="etl"></span><h2>3. ETL<a class="headerlink" href="#module-etl" title="Link to this heading"></a></h2>
+</section>
+<section id="module-etl_functions">
+<span id="funciones-etl"></span><h2>3.1 Funciones ETL<a class="headerlink" href="#module-etl_functions" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dict_in_list">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dict_in_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nuevo_diccionario</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dict_in_list"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dict_in_list" title="Link to this definition"></a></dt>
+<dd><p>Convierte un diccionario en una lista.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nuevo_diccionario</strong> (<em>dict</em>) – Un diccionario que se desea convertir en una lista.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista que contiene el diccionario como su único elemento.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_death">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_death</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_death"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_death" title="Link to this definition"></a></dt>
+<dd><p>Obtiene información sobre las muertes, incluyendo la fecha de defunción y la causa de la muerte.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>recor</strong> (<em>list</em>) – Una lista de registros que contienen información sobre defunciones.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de tuplas, donde cada tupla contiene la fecha de defunción y la causa de la muerte.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_disease">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_disease</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_disease"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_disease" title="Link to this definition"></a></dt>
+<dd><p>Obtiene información sobre enfermedades, incluyendo la fecha de diagnóstico y la patología asociada.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> (<em>list</em>) – Una lista de registros que contienen información sobre enfermedades.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Una tupla de tres listas, donde la primera lista contiene información sobre enfermedades confirmadas,</dt><dd><p>la segunda lista contiene información sobre enfermedades sospechosas y la tercera lista contiene
+información sobre enfermedades recuperadas.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.new_dict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">new_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicc_act</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#new_dict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.new_dict" title="Link to this definition"></a></dt>
+<dd><p>Transforma un diccionario de conteo en un nuevo diccionario con un formato específico.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dicc_act</strong> (<em>dict</em>) – Un diccionario que contiene información de conteo.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario con un formato particular.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.rows_tolist">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">rows_tolist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#rows_tolist"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.rows_tolist" title="Link to this definition"></a></dt>
+<dd><p>Convierte un DataFrame en una lista de listas, donde cada sublista representa una fila del DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datos</strong> (<em>DataFrame</em>) – El DataFrame que se desea convertir.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de listas, donde cada sublista representa una fila del DataFrame.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.trans_dict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">trans_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">muertes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_valores_unicos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#trans_dict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.trans_dict" title="Link to this definition"></a></dt>
+<dd><p>Transforma datos de muertes en un diccionario que cuenta las fechas por enfermedad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>muertes</strong> (<em>list</em>) – Una lista de tuplas que contiene información sobre fechas y enfermedades.</p></li>
+<li><p><strong>lista_valores_unicos</strong> (<em>list</em>) – Una lista de valores únicos de enfermedades.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Un diccionario donde las claves son las enfermedades y los valores son diccionarios que cuentan</dt><dd><p>las fechas correspondientes a cada enfermedad.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-main">
+<span id="main"></span><h2>3. Main<a class="headerlink" href="#module-main" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="main.main">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#main"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#main.main" title="Link to this definition"></a></dt>
+<dd><p>Función principal del programa que realiza una tarea específica.</p>
+<p>Esta función llama a la función «add_data» del módulo «etl» para agregar datos utilizando la variable «con_data»
+del módulo «get_info».</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentación técnica ITC_ETL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Edosoft.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
