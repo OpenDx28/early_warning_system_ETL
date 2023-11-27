@@ -44,6 +44,7 @@ docker build -t opendx/gnu_health https://github.com/OpenDx28/gnu-health-server-
 
 This image will be automatically downloaded later when you run docker-compose up -d.
 
+
 **DHIS2** To create the container we have to clone the repository found at this link:
 
 ``` bash 
