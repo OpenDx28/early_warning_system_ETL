@@ -93,7 +93,7 @@ Dhis2
 ```
 
 ## Container_etl
-### Conexiones
+### Connections
 In our container we have a csv called datacon.csv in which we have all the information about the connection to our tryton server and DHIS2.
 
 ![Datacon.csv](assets/Captura.PNG)
