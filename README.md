@@ -3,7 +3,7 @@
 ## About the Project
 In this project a Demo is presented, which shows as an example an ETL process in which we use ```GNU-Health``` as data source and ```DHIS2``` as destination.
 
-## Notas
+## Notes
 This repository originates from two different GNU-Health servers which aim to simulate the data of two Faculties.
 - faculty1: Hospital_Adeje
 - faculty2: sanitary_center_Adeje
