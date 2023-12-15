@@ -1,0 +1,3 @@
+user,password,DDBB_name,Hostname,Orgunits_code,Orgunits_name,ports,dhis2_name,dhis2_port
+admin,opendx28,ghs1,version2-health_1-1,K2sYFAy8NAo,Hospital_Adeje,8000,web,8080
+admin,opendx28,ghs2,version2-health_1-1,tR1ESmLTDC1,sanitary_center_Adeje,8000,web,8080

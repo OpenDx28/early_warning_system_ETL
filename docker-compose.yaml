@@ -3,19 +3,15 @@ version: "3.3"
 services:
 
   etl_container:
-    image: etl
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - ./main.py:/app/main.py
-      - ./connection.py:/app/connection.py
-      - ./etl.py:/app/etl.py
-      - ./etl_functions.py:/app/etl_functions.py
-      - ./get_info.py:/app/get_info.py
-      - ./datacon.csv:/app/datacon.csv
-      - ./dataorg.csv:/app/dataorg.csv
+      - ./sist_alerta_temprana:/app/sist_alerta_temprana/
     command: tail -f /dev/null
 
   health_2:
-    image: opendx/gnu_health
+    image: opendx/gnu_health2
     build:
       context: .
     environment:
@@ -32,7 +28,7 @@ services:
         condition: service_healthy
 
   health_1:
-    image: opendx/gnu_health
+    image: opendx/gnu_health2
     build:
       context: .
     environment:

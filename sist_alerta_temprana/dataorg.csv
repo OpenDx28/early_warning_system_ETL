@@ -1,0 +1,258 @@
+name,uid,datasetName,datasetCode,period,organisationUnits,dataelement
+acute flacid,PJLxefKOOUQ,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+cholera,SYrUS9vk2M6,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+dengue,t4vDQsX5d18,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+diarrhoea,k9eytexnhq6,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+diptheria,YJz9fD46Xg9,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+measles,hIFoJQ2kSJF,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+pertussis,iDPEto9SRIE,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+plague,Fh28PAW081J,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+rabies,Jc4t95dOczx,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+rubella,M1MOvKxEXMf,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+viral hemorrhagic,gGHRfku8Ld8,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+yellow fever,O5Z6BN8xwsL,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyDeath
+acute flacid,Hq7bd7AQqRt,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+cholera,NUuIMAB9QKu,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+dengue,BMhCyUqblP3,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+diarrhoea,zLSXOrvexiN,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+diptheria,jyxOJS30PT4,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+measles,nglbTBFcSzG,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+pertussis,I2qqsgKhvbd,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+plague,GjffSjYMdMs,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+rabies,s9uhlE8oozS,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+rubella,NZ9rk7RiODy,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+viral hemorrhagic,iCfHLOTX4Fa,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+yellow fever,UTvtMAFDeFJ,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyConfirmedt
+acute flacid,puOybd8biSC,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+cholera,H5GIB0A5Pyt,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+dengue,FcwJYepXc6O,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+diarrhoea,BiV2NjTe0nt,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+diptheria,IepOYjGDsWl,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+measles,pZD0v2LKJ3C,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+pertussis,dcYgkbkU4RT,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+plague,zyuiADe74V5,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+rabies,vO9sdhZlmb6,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+rubella,aB2KVpaHIbX,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+viral hemorrhagic,WXS2gDJDlA2,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+yellow fever,d5RnFn1g5kK,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailyRecoveredt
+acute flacid,UqDHUy3Ac8v,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+cholera,MfByfBEgvfu,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+dengue,XYNqfDzY6uh,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+diarrhoea,yuDdfCPVrPZ,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+diptheria,j3nBa7rHDie,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+measles,JU7bKKM4lit,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+pertussis,GwtTclaQXOC,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+plague,Xni1QsUq6gA,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+rabies,VXwSZvLopAo,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+rubella,CkJUMUQluOT,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+viral hemorrhagic,xRIhquU29qV,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+yellow fever,VcJc3Cmumy7,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+acute flacid,JZzMfXQaXx7,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+cholera,HkA1nukE5E8,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+dengue,vMNVMSBxBsA,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+diarrhoea,Pywu1S4JRUL,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+diptheria,qCi0IPvGo3Q,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+measles,ziCN6VQYwuJ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+pertussis,R90mB2qsxQO,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+plague,fvwIdKO4Yok,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+rabies,CrRidRmVlp9,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+rubella,DfDP4xp32lS,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+viral hemorrhagic,EZOfvDcuAm1,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+yellow fever,qae4NLBleqd,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
+acute flacid,ko4ljlYBe1e,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+cholera,kOk6wXW73XN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+dengue,b362jUqr172,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+diarrhoea,ASt2I4RK0l5,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+diptheria,dtovFAYgrRl,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+measles,fUhZWXx17jM,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+pertussis,Eg0CHS0IoJ6,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+plague,qvUAMqSarM5,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+rabies,PVyGWYNygJu,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+rubella,h6Liba7fBXm,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+viral hemorrhagic,ZMqLJUUwFD1,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+yellow fever,wrm6dlMcGom,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PreActiveCasest
+acute flacid,aUvJ2nSQ7YM,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+cholera,eRNZavninU4,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+dengue,haBMU9BSsvZ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+diarrhoea,vi5rJb8tNd7,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+diptheria,BseFEXyL2lF,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+measles,kv029mOoOAV,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+pertussis,qvUjCiEoD4l,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+plague,OX6IKB20ZCN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+rabies,OX9Z11R5Zp5,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+rubella,cNW2NJTL9eQ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+viral hemorrhagic,bwIVnLMAktR,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+yellow fever,cHJtRu75k1f,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,DeathsPercentaget
+acute flacid,BdG54n4epI1,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+cholera,ZWiU6svFyCW,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+dengue,YfN8HMOv1Ac,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+diarrhoea,jgUgnv7TpIQ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+diptheria,U8oFUitPm4Q,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+measles,Owy0reEzSFn,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+pertussis,WpIDTmv1D4E,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+plague,XI5MSAsLf1B,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+rabies,vnbVO35r2gM,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+rubella,M3HkzvPiQrW,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+viral hemorrhagic,WxjRddxd1rm,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+yellow fever,w1VFBL3g2Aj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,RecoveredPercentaget
+acute flacid,GzqPq4gctgn,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+cholera,basVKr8AM1Z,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+dengue,FxxnnjkhLkz,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+diarrhoea,yL6qs9KCrFU,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+diptheria,qAe3ecty9rX,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+measles,vonHUPjDEOj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+pertussis,TYAWGFmVkMu,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+plague,OyFYid8V7Tr,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+rabies,pZcV2eu9YPN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+rubella,jGGLycLsVx9,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+viral hemorrhagic,uOeqWJaICKF,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+yellow fever,zQayqtrJmc2,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,aHSI
+acute flacid,G3dbFdzSzuY,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+cholera,DBSdu1ufIL6,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+dengue,ewYWVN4azUE,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+diarrhoea,s5KpRy2p7GN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+diptheria,kv2DJiL80xr,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+measles,dLp13HxS3lo,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+pertussis,X76WO5vVJdP,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+plague,E1h2eHkbAfJ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+rabies,zXNYqKzZ30L,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+rubella,KcJkaCiTpZE,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+viral hemorrhagic,Y1AhaQcaKBN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+yellow fever,NSzBM6qE3eB,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,dHSI
+acute flacid,sElcvBwP8ak,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+cholera,JAlFAFRC93j,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+dengue,D2BAIr02NQn,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+diarrhoea,PvXHRY1x3Ni,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+diptheria,d6uwmTZ33vv,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+measles,aSO4Py7qwZQ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+pertussis,kfNHpTn92vS,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+plague,c2OQYDmHAUj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+rabies,ZNJ5pj5qgdH,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+rubella,gpP0BW71zZT,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+viral hemorrhagic,Y7cGZo8giet,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+yellow fever,z9Hutc2OCH0,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,hPORt
+acute flacid,WJwaBjkA6Nm,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+cholera,lrkBfTrbTDq,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+dengue,AC9gPpS20Jg,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+diarrhoea,viQFmF5LUPB,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+diptheria,IJ20ybPNFEe,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+measles,Cf4YjZGaaTu,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+pertussis,NF47WQtGf8P,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+plague,NW3exDFktaG,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+rabies,UurWA8mSefw,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+rubella,xhm1jQvmho1,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+viral hemorrhagic,jggyfzSztoc,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+yellow fever,D5KFWqdbCQN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,icuPORr
+acute flacid,h0jdVL4PhVB,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+cholera,zs2tAr5df7D,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+dengue,gUtz1V6EhUL,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+diarrhoea,Pohdqwz91eE,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+diptheria,EjYBUBUgMkQ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+measles,njQCXwUPbf3,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+pertussis,DEvc1olhdtH,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+plague,v8hTrhGoxyZ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+rabies,PL793gg2kaz,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+rubella,HLP8zZE2Y2e,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+viral hemorrhagic,HEV58zJ7gcM,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+yellow fever,nyPjDGR13k2,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,A
+acute flacid,wntB9Q2UFql,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+cholera,uffXT4R7xtc,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+dengue,Qiv2NBa1gh0,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+diarrhoea,oDdrBWWh380,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+diptheria,kOqTMEoGQym,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+measles,N1ECebcL0cl,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+pertussis,c4K07xrvG5e,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+plague,zUeXpZBAmK9,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+rabies,Q03mHnj2LZv,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+rubella,gYcvXXkWpfz,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+viral hemorrhagic,fxT2ydBHVKp,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+yellow fever,G0x3VkYu15j,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,PHC
+acute flacid,h0L1Y8VS0CA,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+cholera,uOubTJTckd0,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+dengue,l0RDJaCTjtq,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+diarrhoea,BIW51NswDlq,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+diptheria,FYWQu4HFRqk,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+measles,qKH84CRSTOh,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+pertussis,aDFZMpOy6Og,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+plague,L4oxcFAoA2F,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+rabies,QvzG3Vqcng7,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+rubella,M03gax1ZFAc,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+viral hemorrhagic,tLu8b11sBtq,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+yellow fever,Lxc3mfW6zRf,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Bt
+acute flacid,O0YI8AtiVuL,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+cholera,LlV7njYG8QA,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+dengue,Aix912u5czY,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+diarrhoea,vJYlmMxGgWP,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+diptheria,wJ5ke7HsvrU,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+measles,zEhKzjhdA4x,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+pertussis,ZWYxjl81SVG,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+plague,tYPqFdcxtwt,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+rabies,K6wO6hizz0E,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+rubella,uu8jcVlsXiv,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+viral hemorrhagic,R5wCKIGUz4o,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+yellow fever,NL2y47lYrYH,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,It
+acute flacid,sxJoRB9rkil,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+cholera,tRtzPHEGt26,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+dengue,fuMTJhBhTJx,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+diarrhoea,MuIovmM5ttx,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+diptheria,OxziGmoyb6x,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+measles,ZtHAZUG2JOd,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+pertussis,f97S1zfWLVN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+plague,iJ3UlXZ5zZi,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+rabies,swf7n9MvaJl,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+rubella,xJwrRvWxk54,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+viral hemorrhagic,P8hfIBeAOHc,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+yellow fever,ZHBSnGMEkRV,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Solvedt
+acute flacid,qYJ3YYLADtz,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+cholera,Sc5efRwnOA9,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+dengue,wryMP8p8k1C,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+diarrhoea,juTM5EM0Jo0,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+diptheria,Hrsq0RqGFKO,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+measles,PR3HRX1IEBj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+pertussis,ClUDerxOIWR,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+plague,rl1SLaRmaZ4,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+rabies,lo0rfBSWDbf,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+rubella,PR3HRX1IEVj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+viral hemorrhagic,FMM88mSULsl,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+yellow fever,Q1xDDDusLwl,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Suspected
+acute flacid,b0IzLHcVdm0,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+cholera,FTWXeWdPdVH,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+dengue,unXcJLrNYNe,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+diarrhoea,jxvt8LFSx8e,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+diptheria,X4gFcPKQ8Cw,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+measles,yMlASPYVU2v,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+pertussis,RAQCr5DpCzC,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+plague,iuh5hm4RVBR,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+rabies,MbAkHOTlcyp,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+rubella,rVi7C4a14jp,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+viral hemorrhagic,ezlLC4UCA2g,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+yellow fever,I11IpNMGxaR,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Confirmed
+acute flacid,P666FBECG0N,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+cholera,miZ7nLeBp1w,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+dengue,vd4GxqtKkRC,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+diarrhoea,ddGAKVfTvlQ,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+diptheria,xfkxDz03AFK,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+measles,qNsd9cPWNVo,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+pertussis,bHSkKIwVBay,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+plague,qqqAULiKFu2,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+rabies,n1iUA7kb0wj,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+rubella,qNsd9cPWNBo,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+viral hemorrhagic,hi5J0vMBrbE,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+yellow fever,sjd8VtIZxmz,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Deaths
+acute flacid,vt6miwvveoM,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+cholera,rvEjbRdXDT3,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+dengue,eT85OAu7xya,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+diarrhoea,l3V43zTVhsk,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+diptheria,QHJ6LsUqSAm,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+measles,vs43SOaV5Ic,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+pertussis,j2hL2lFBT8a,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+plague,Hj51a2uGoC3,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+rabies,bsAOPVuDRQW,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+rubella,alLHd3PHaUR,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+viral hemorrhagic,J0wve5rm4x4,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+yellow fever,ioRvKJarTaL,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,Recovered
+Gross mortality rate,AbWoj6DcTr2,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Gross mortality rate
+Autopsy rate,FxamR9gWUMp,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Autopsy rate
+Newborn rate,yqLeTS2S5e2,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Newborn rate
+Inpatient surgery index,PgtjlvVDKIM,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,surgery
+Mortality in surgical episode,XuQu1qeAJ3O,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,surgical
