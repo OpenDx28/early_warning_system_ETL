@@ -132,6 +132,14 @@ RecoveredPercentage1 = dict_to_list(resulth,porcentaje(sortedict(trans_dict(dise
 RecoveredPercentage2 = dict_to_list(resulth,porcentaje(sortedict(trans_dict(dise2_r, names_illnes)),sortedict(trans_dict(dise2_c, names_illnes))))
 logging.info(f"RecoveredPercentage")
 
+hPOR1 = dict_to_list(resultb,dividir(sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))),sortedict(trans_dict(bedh1, names_illnes))))
+hPOR2 = dict_to_list(resultb,dividir(sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill2, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))),sortedict(trans_dict(bedh2, names_illnes))))
+logging.info(f"hPOR")
+
+icuPOR1 = dict_to_list(resultc,dividir(sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))),sortedict(trans_dict(bedicu1, names_illnes))))
+icuPOR2 = dict_to_list(resultc,dividir(sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill2, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))),sortedict(trans_dict(bedicu2, names_illnes))))
+logging.info(f"icuPOR")
+
 aHsi1 = dict_to_list(resulth,porcentaje(sumar(sortedict(trans_dict(dise1_r, names_illnes)),sortedict(trans_dict(deathill1, names_illnes))),sortedict(trans_dict(dise1_c, names_illnes))))
 aHsi2 = dict_to_list(resulth,porcentaje(sumar(sortedict(trans_dict(dise1_r, names_illnes)),sortedict(trans_dict(deathill1, names_illnes))),sortedict(trans_dict(dise2_c, names_illnes))))
 logging.info(f"aHsi")
@@ -139,16 +147,16 @@ logging.info(f"aHsi")
 dHsi1 = dict_to_list(resulth,dividir(sumar(sortedict(trans_dict(dise1_r, names_illnes)),sortedict(trans_dict(deathill1, names_illnes))),sortedict(trans_dict(dise1_c, names_illnes))))
 dHsi2 = dict_to_list(resulth,dividir(sumar(sortedict(trans_dict(dise1_r, names_illnes)),sortedict(trans_dict(deathill1, names_illnes))),sortedict(trans_dict(dise2_c, names_illnes))))
 logging.info(f"dHsi")
+
+
+activecases = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
+activecases2 = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))))
+logging.info(f"dHsi")
+
+PreActiveCases1 = dict_to_list(result6,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
+PreActiveCases2 = dict_to_list(result6,sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))))
+logging.info(PreActiveCases1)
 '''
-
-#activecases = three_dicts(conf_daily,dea_daily,recu_daily)
-#activecases2 = three_dicts(conf_daily2,dea_daily2,recu_daily2)
-
-#l1 = [morta_surgical1,index_surgery1,newborn_rate1,autopsy_rate1,gross_mortality1,DailyDeath1,d1,DailyConfirmedt1,c1,
-#      DailyRecoveredt1,r1,s1,a1,phc1,tb1,ti1,solved1,DailySolvedt1,DeathsPercentage1,RecoveredPercentage1,aHsi1,dHsi1]
-
-#l2 = [morta_surgical2,index_surgery2,newborn_rate2,autopsy_rate2,gross_mortality2,DailyDeath2,d2,DailyConfirmedt2,c2,
-#      DailyRecoveredt2,r2,s2,a2,phc2,tb2,ti2,solved2,DailySolvedt2,DeathsPercentage2,RecoveredPercentage2,aHsi2,dHsi2]
 print('list calculated')
 '''
 '''

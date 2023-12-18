@@ -222,6 +222,32 @@ def porcentaje(ejemplo1,ejemplo2):
     # Mostrar el resultado
     return resultado
 
+def sumar_tres_diccionarios(ejemplo1, ejemplo2, ejemplo3):
+    # Crear un diccionario resultado como copia superficial del primer diccionario
+    resultado = {clave: dic.copy() for clave, dic in ejemplo1.items()}
+
+    # Iterar sobre el segundo diccionario y sumar las cantidades
+    for clave, dic in ejemplo2.items():
+        if clave in resultado:
+            for subclave, cantidad in dic.items():
+                resultado[clave][subclave] = resultado[clave].get(subclave, 0) - cantidad
+        else:
+            resultado[clave] = dict(dic)
+
+    # Iterar sobre el tercer diccionario y sumar las cantidades
+    for clave, dic in ejemplo3.items():
+        if clave in resultado:
+            for subclave, cantidad in dic.items():
+                resultado[clave][subclave] = resultado[clave].get(subclave, 0) - cantidad
+        else:
+            resultado[clave] = dict(dic)
+
+    # Devolver el resultado
+    return resultado
+
+
+
+
 def sum_ind(dic1,dic2):
     # Crear un nuevo diccionario para almacenar la suma de los valores por fecha
     result_dict_solv = {}
