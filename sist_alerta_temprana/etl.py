@@ -149,7 +149,7 @@ dHsi2 = dict_to_list(resulth,dividir(sumar(sortedict(trans_dict(dise1_r, names_i
 logging.info(f"dHsi")
 
 
-activecases = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
+activecases1 = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
 activecases2 = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))))
 logging.info(f"activecases")
 
@@ -176,22 +176,20 @@ data['Nueva_Columnah'] = [DailyRecoveredt1,DailyRecoveredt2]
 data['Nueva_Columna8'] = [d1,d2]
 data['Nueva_Columnag'] = [DailyDeath1,DailyDeath2]
 '''
-data['Nueva_Columna9'] = [r1,r2]
 data['Nueva_Columnaa'] = [a1,a2]
 data['Nueva_Columnab'] = [phc1,phc2]
 data['Nueva_Columnac'] = [tb1,tb2]
 data['Nueva_Columnad'] = [ti1,ti2]
 data['Nueva_Columnae'] = [solved1,solved2]
-data['Nueva_Columnaf'] = [DailyConfirmedt1,DailyConfirmedt2]
-
-data['Nueva_Columnag'] = [DailyDeath1,DailyDeath2]
-
-data['Nueva_Columnah'] = [DailyRecoveredt1,DailyRecoveredt2]
 data['Nueva_Columnai'] = [DailySolvedt1,DailySolvedt2]
 data['Nueva_Columnaj'] = [DeathsPercentage1,DeathsPercentage2]
 data['Nueva_Columnak'] = [RecoveredPercentage1,RecoveredPercentage2]
 data['Nueva_Columnal'] = [aHsi1,aHsi2]
-data['Nueva_Columnan'] = [dHsi1,dHsi2]
+data['Nueva_Columnam'] = [dHsi1,dHsi2]
+data['Nueva_Columnan'] = [hPOR1,hPOR2]
+data['Nueva_Columnao'] = [icuPOR1,icuPOR2]
+data['Nueva_Columnap'] = [activecases1,activecases2]
+data['Nueva_Columnaq'] = [PreActiveCases1,PreActiveCases2]
 '''
 
 con_data = rows_tolist(data)

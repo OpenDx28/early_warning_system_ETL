@@ -169,7 +169,7 @@ def add_data(pacience):
             Nueva_Columna2,Nueva_Columna3,Nueva_Columna4,Nueva_Columna5,Nueva_Columna6,Nueva_Columna7,\
             Nueva_Columna8,Nueva_Columna9,Nueva_Columnaa,Nueva_Columnab,Nueva_Columnac,Nueva_Columnad,Nueva_Columnae,Nueva_Columnaf,\
             Nueva_Columnag,Nueva_Columnah,Nueva_Columnai,Nueva_Columnaj,Nueva_Columnak,Nueva_Columnal,\
-            Nueva_Columnam,Nueva_Columnan
+            Nueva_Columnam,Nueva_Columnan,Nueva_Columnao,Nueva_Columnap,Nueva_Columnaq
             '''
         datasetname1 = illnes['datasetName'][0]
         datasetname2 = illnes['datasetName'][100]
@@ -177,42 +177,32 @@ def add_data(pacience):
         logging.info(f"starting add data")
         print(f"starting add data")
         '''addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnaf))'''
-        valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnag)
         #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaf)
+        valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnag)
         #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnah)
-        print('--------------------------------------------ahora el semanal--------------------------------------')
-        valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna8)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnai)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaj)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnak)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnal)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnam)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnan)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnao)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnap)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaq)
         #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna6)
         #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna7)
+        valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna8)
         #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna9)
-        print('--------------------------------------------ahora los solitarios--------------------------------------')
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaa)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnab)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnac)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnad)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnae)
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna2))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna3))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna4))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna5))
-        #addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna5))
-        '''addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnah))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnai))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnaj))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnak))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnal))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnam))
-        addDataValue(datasetname1,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnan))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnaa))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnab))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnac))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnad))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columnae))
-        addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna9))'''
-        #addDataValue(datasetname2,Orgunits_name,dhis2_name,str(dhis2_port),json.dumps(Nueva_Columna8))
-        '''addDataValue(datasetname2,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna7))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna6))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna2))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna3))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna4))
-        addDataValue(datasetname3,Orgunits_name,dhis2_name,dhis2_port,json.dumps(Nueva_Columna5))'''
         logging.info(f"process completed for {Orgunits_name}")
 
             
