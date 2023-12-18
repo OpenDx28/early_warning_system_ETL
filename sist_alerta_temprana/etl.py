@@ -151,11 +151,11 @@ logging.info(f"dHsi")
 
 activecases = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
 activecases2 = dict_to_list(result5,sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))))
-logging.info(f"dHsi")
+logging.info(f"activecases")
 
 PreActiveCases1 = dict_to_list(result6,sumar_tres_diccionarios(sortedict(trans_dict(dise1_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise1_r, names_illnes))))
 PreActiveCases2 = dict_to_list(result6,sumar_tres_diccionarios(sortedict(trans_dict(dise2_c, names_illnes)),sortedict(trans_dict(deathill1, names_illnes)),sortedict(trans_dict(dise2_r, names_illnes))))
-logging.info(PreActiveCases1)
+logging.info(PreActiveCases)
 '''
 print('list calculated')
 '''

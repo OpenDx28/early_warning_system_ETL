@@ -266,30 +266,6 @@ def sum_ind(dic1,dic2):
         result_dict_solv[date] = dic2[date]
     return result_dict_solv
 
-def three_dicts(dic1, dic2, dic3):
-    # Crear un nuevo diccionario para almacenar la resta de los valores por fecha
-    ActiveCases = {}
-
-    # Obtener las fechas comunes entre los tres diccionarios
-    common_dates = set(dic1.keys()) & set(dic2.keys()) & set(dic3.keys())
-
-    # Iterar sobre las fechas comunes y restar los valores correspondientes de dic2 y dic3 a dic1
-    for date in common_dates:
-        ActiveCases[date] = dic1[date] - dic2[date] - dic3[date]
-
-    # Agregar las fechas que están en dic1 pero no en dic2 o dic3
-    for date in set(dic1.keys()) - common_dates:
-        ActiveCases[date] = dic1[date]
-
-    # Agregar las fechas que están en dic2 pero no en dic1 o dic3
-    for date in set(dic2.keys()) - common_dates:
-        ActiveCases[date] = -dic2[date]
-
-    # Agregar las fechas que están en dic3 pero no en dic1 o dic2
-    for date in set(dic3.keys()) - common_dates:
-        ActiveCases[date] = -dic3[date]  # Restar los valores de dic3
-
-    return ActiveCases
 
 def percent_ind(dic1,dic2):
     # Crear un nuevo diccionario para almacenar la suma de los valores por fecha
@@ -402,7 +378,7 @@ def dict_to_list(list_illnes,vector):
     #listdea1 = dict_in_list(new_dict1)
     return new_dict1
 
-def new_dict4(dicc_act):
+def new_dict_f(dicc_act):
     nuevo_diccionario = {}
 
     # Recorrer el diccionario original
@@ -426,7 +402,7 @@ def new_dict4(dicc_act):
 
 def dictio_to_list(list_illnes,vector):
     sector = dict(zip(list_illnes, vector.values()))
-    new_dict1 = new_dict4(sector)
+    new_dict1 = new_dict_f(sector)
     lista_transformada = [{clave: diccionario[0]} for diccionario_con_lista in new_dict1
     for clave, diccionario in diccionario_con_lista.items()]
     listas_listas = [[elementos] for elementos in lista_transformada]
