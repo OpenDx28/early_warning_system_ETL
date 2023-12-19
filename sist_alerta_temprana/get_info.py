@@ -42,6 +42,10 @@ resultm = list (illnes.loc[illnes['dataelement'] == 'Autopsy rate', 'uid'])
 resultn = list (illnes.loc[illnes['dataelement'] == 'Newborn rate', 'uid'])
 resulto = list (illnes.loc[illnes['dataelement'] == 'surgery', 'uid'])
 resultp = list (illnes.loc[illnes['dataelement'] == 'surgical', 'uid'])
+resultq = list (illnes.loc[illnes['dataelement'] == 'Cesarean rate', 'uid'])
+resultr = list (illnes.loc[illnes['dataelement'] == 'Vaginal rate', 'uid'])
+results = list (illnes.loc[illnes['dataelement'] == 'weekend surgical', 'uid'])
+resultt = list (illnes.loc[illnes['dataelement'] == 'B', 'uid'])
 
 def login():
     session = requests.Session()

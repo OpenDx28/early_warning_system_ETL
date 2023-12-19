@@ -47,6 +47,18 @@ rabies,VXwSZvLopAo,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rT
 rubella,CkJUMUQluOT,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
 viral hemorrhagic,xRIhquU29qV,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
 yellow fever,VcJc3Cmumy7,"IDS daily - Report: Suspected, Confirm, Death, Recovered",rTPYTgYoxAQ,Daily,Fu370tZTKYz,DailySolvedt
+acute flacid,yS4MXtRcZTm,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+cholera,fl58YaIi8mN,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+dengue,BiKq6sR1K1x,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+diarrhoea,Bzq2xWQoYQa,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+diptheria,g888UicEoRs,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+measles,R3CLt2pM6to,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+pertussis,YRkBAzoci4Z,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+plague,V24X5OSW1Xa,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+rabies,Ipzm4P4QbNn,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+rubella,qFCmPnIfxpL,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+viral hemorrhagic,GAlE2qpQln3,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
+yellow fever,ergtKFtQCA9,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,B
 acute flacid,JZzMfXQaXx7,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
 cholera,HkA1nukE5E8,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
 dengue,vMNVMSBxBsA,"IDS - Report: Suspected, Confirm, Death",ZyZmZTUwctj,Weekly,Fu370tZTKYz,ActiveCasest
@@ -256,3 +268,6 @@ Autopsy rate,FxamR9gWUMp,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Autopsy ra
 Newborn rate,yqLeTS2S5e2,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Newborn rate
 Inpatient surgery index,PgtjlvVDKIM,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,surgery
 Mortality in surgical episode,XuQu1qeAJ3O,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,surgical
+Cesarean rate,nI8R3J8r3df,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Cesarean rate
+Vaginal rate,LTj61ZxBj0J,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,Vaginal rate
+weekend surgical,Xl16cWzTrzV,Economy Index,xOfzzjLB2sF,Weekly,Fu370tZTKYz,weekend surgical
