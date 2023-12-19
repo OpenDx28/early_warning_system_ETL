@@ -34,14 +34,14 @@ dise1_c,dise1_s,dise1_r = info_disease(dise1)
 dise2_c,dise2_s,dise2_r = info_disease(dise2)
 
 
-bedh1,bedicu1,dish1,dispc1 = info_registration(reg1)
-bedh2,bedicu2,dish2,dispc2 = info_registration(reg2)
+bedh1,bedicu1,dish1,dispc1,ocu1 = info_registration(reg1)
+bedh2,bedicu2,dish2,dispc2,ocu2 = info_registration(reg2)
 '''
-newb1, newbdied1,born1 = info_newborn(new1)
-newb2,newbdied2,born2= info_newborn(new2)
+newb1,newbdied1,born1,cae1, vag1 = info_newborn(new1)
+newb2,newbdied2,born2,cae2, vag2 = info_newborn(new2)
 
-surg1,surgdied1,surgalive1 = info_surgery(surge1)
-surg2,surgdied2,surgalive2 = info_surgery(surge2)
+surg1,surgdied1,surgalive1, weekend_surg1,weekend_surgalive1 = info_surgery(surge1)
+surg2,surgdied2,surgalive2, weekend_surg2,weekend_surgalive2 = info_surgery(surge2)
 
 
 logging.info(f"info obtained from all models")
@@ -56,6 +56,17 @@ index_surgery1 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf
 index_surgery2 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(surg2))),to_week(sorteddict(transf_dict(surg2)))),resulto[0]))
 logging.info(f"index_surgery")
 
+weekend_surgical1 = dict_in_list(dict_payload(div_ind(res_ind(to_week(sorteddict(transf_dict(weekend_surg1))),to_week(sorteddict(transf_dict(weekend_surgalive1)))),to_week(sorteddict(transf_dict(weekend_surg1)))),resulto[0]))
+weekend_surgical2 = dict_in_list(dict_payload(div_ind(res_ind(to_week(sorteddict(transf_dict(weekend_surg2))),to_week(sorteddict(transf_dict(weekend_surgalive2)))),to_week(sorteddict(transf_dict(weekend_surg2)))),resulto[0]))
+logging.info(f"weekend_surgical")
+
+cesarean_rate1 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(cae1))),to_week(sorteddict(transf_dict(born1)))),resultn[0]))
+cesarean_rate2 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(cae2))),to_week(sorteddict(transf_dict(born2)))),resultn[0]))
+logging.info(f"cesarean_rate")
+
+vaginal_rate1 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(vag1))),to_week(sorteddict(transf_dict(born1)))),resultn[0]))
+vaginal_rate2 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(vag2))),to_week(sorteddict(transf_dict(born2)))),resultn[0]))
+logging.info(f"vaginal_rate")
 
 newborn_rate1 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(newb1))),to_week(sorteddict(transf_dict(born1)))),resultn[0]))
 newborn_rate2 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(newb2))),to_week(sorteddict(transf_dict(born2)))),resultn[0]))
@@ -77,6 +88,10 @@ logging.info(f"DailyDeath")
 d1 = dictio_to_list(resultj,weekly(sortedict(trans_dict(deathill1, names_illnes))))
 d2 = dictio_to_list(resultj,weekly(sortedict(trans_dict(deathill2, names_illnes))))
 logging.info(f"D")
+
+b1 = dictio_to_list(resultj,weekly(sortedict(trans_dict(ocu1, names_illnes))))
+b2 = dictio_to_list(resultj,weekly(sortedict(trans_dict(ocu2, names_illnes))))
+logging.info(f"B")
 
 '''
 

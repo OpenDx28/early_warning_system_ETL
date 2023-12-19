@@ -17,77 +17,54 @@ def rows_tolist(datos):
 
 
 def info_death(records):
-    deathillnes = []
-    death = []
-    necropsy = []
-    logging.info("obtaining data from the death model")
-    for rec in records:
-        deathillnes.append((rec.dod, rec.cod.name))
-        death.append(rec.dod)
-        if rec.autopsy is True:
-            necropsy.append(rec.dod)
+    logging.info("Obtaining data from the death model")
+    deathillnes = [(rec.dod, rec.cod.name) for rec in records]
+    death = [rec.dod for rec in records]
+    necropsy = [rec.dod for rec in records if rec.autopsy]
+
     return death, necropsy, deathillnes
 
+
 def info_disease(record):
-    confir = []
-    suspe = []
-    reco = []
-    logging.info(f"obtaining data from the disease model")
-    for rec in record:
-        if rec.lab_confirmed is True and rec.healed_date is None:
-            confir.append((rec.diagnosed_date, rec.pathology.name))
-        elif rec.lab_confirmed is False and rec.healed_date is None:
-            suspe.append((rec.diagnosed_date, rec.pathology.name))
-        elif rec.lab_confirmed is True and rec.healed_date is not None:
-            reco.append((rec.healed_date, rec.pathology.name))
+    logging.info("Obtaining data from the disease model")
+    confir = [(rec.diagnosed_date, rec.pathology.name) for rec in record if rec.lab_confirmed and rec.healed_date is None]
+    suspe = [(rec.diagnosed_date, rec.pathology.name) for rec in record if not rec.lab_confirmed and rec.healed_date is None]
+    reco = [(rec.healed_date, rec.pathology.name) for rec in record if rec.lab_confirmed and rec.healed_date is not None]
+
     return confir, suspe, reco
-    
-    
+
+
 def info_registration(recor):
-    bedh = []
-    bedicu = []
-    dish = []
-    dispc = []
-    logging.info(f"obtaining data from the registration model")
-    for rec in recor:
-        #rec.admission_reason.name si estamos con el server nuevo sino es rec.pathology.name
-        bedh.append((rec.hospitalization_date, rec.admission_reason.name))
-        if rec.icu is True:
-            bedicu.append((rec.hospitalization_date, rec.admission_reason.name))
-        if rec.state != 'hospitalized':
-            dish.append((rec.discharge_date, rec.admission_reason.name))
-        if rec.discharge_reason == 'Home':
-            dispc.append((rec.discharge_date, rec.admission_reason.name))
-    return bedh,bedicu,dish,dispc
+    logging.info("Obtaining data from the registration model")
+    bedh = [(rec.hospitalization_date, rec.admission_reason.name) for rec in recor]
+    bedicu = [(rec.hospitalization_date, rec.admission_reason.name) for rec in recor if rec.icu]
+    dish = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.state != 'hospitalized']
+    dispc = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.discharge_reason == 'Home']
+    ocu = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.bed.state == 'occupied']
+    
+    return bedh, bedicu, dish, dispc,ocu
+
 
 def info_newborn(recor):
-    newb = []
-    newbdied = []
-    born = []
-    logging.info(f"obtaining data from the pregnancy model")
-    for rec in recor:
-        born.append(rec.pregnancy_end_date)
-        if rec.pregnancy_end_result == 'live_birth':
-            newb.append(rec.pregnancy_end_date)
-        else:
-            newbdied.append(rec.pregnancy_end_date)
-
-    return newb,newbdied,born
+    logging.info("Obtaining data from the pregnancy model")
+    newb = [rec.pregnancy_end_date for rec in recor if rec.pregnancy_end_result == 'live_birth']
+    newbdied = [rec.pregnancy_end_date for rec in recor if rec.pregnancy_end_result != 'live_birth']
+    born = [rec.pregnancy_end_date for rec in recor]
+    cae = [rec.pregnancy_end_date for rec in recor if rec.perinatal[0].start_labor_mode == 'c']
+    vag = [rec.pregnancy_end_date for rec in recor if rec.perinatal[0].start_labor_mode != 'c']
+    
+    return newb, newbdied, born, cae, vag
 
 
 def info_surgery(recor):
-    surg = []
-    surgdied = []
-    surgalive = []
-    logging.info(f"obtaining data from the surgery model")
-    for rec in recor:
-        surg.append(rec.surgery_end_date)
-        if rec.clavien_dindo == 'grade1':
-            surgalive.append(rec.surgery_end_date)
-        else:
-            surgdied.append(rec.surgery_end_date)
+    logging.info("Obtaining data from the surgery model")
+    surg = [rec.surgery_end_date for rec in recor]
+    surgdied = [rec.surgery_end_date for rec in recor if rec.clavien_dindo != 'grade1']
+    surgalive = [rec.surgery_end_date for rec in recor if rec.clavien_dindo == 'grade1']
+    weekend_surg = [ date for date in surg1 if date.weekday() in [5, 6]]
+    weekend_surgalive = [ date for date in surgalive if date.weekday() in [5, 6]]
+    return surg, surgdied, surgalive, weekend_surg, weekend_surgalive 
 
-    return surg,surgdied,surgalive
 
 def transf_dict(surg):
     # Truncar las fechas a solo el componente de la fecha (ignorando la hora)
@@ -248,14 +225,14 @@ def sumar_tres_diccionarios(ejemplo1, ejemplo2, ejemplo3):
 
 
 
-def sum_ind(dic1,dic2):
+def res_ind(dic1,dic2):
     # Crear un nuevo diccionario para almacenar la suma de los valores por fecha
     result_dict_solv = {}
 
     # Iterar sobre las fechas comunes en ambos diccionarios
     common_dates = set(dic1.keys()) & set(dic2.keys())
     for date in common_dates:
-        result_dict_solv[date] = dic1[date] + dic2[date]
+        result_dict_solv[date] = dic1[date] - dic2[date]
 
     # Agregar las fechas que solo están en dic1
     for date in set(dic1.keys()) - common_dates:
