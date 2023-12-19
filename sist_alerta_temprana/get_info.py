@@ -173,7 +173,8 @@ def add_data(pacience):
             Nueva_Columna2,Nueva_Columna3,Nueva_Columna4,Nueva_Columna5,Nueva_Columna6,Nueva_Columna7,\
             Nueva_Columna8,Nueva_Columna9,Nueva_Columnaa,Nueva_Columnab,Nueva_Columnac,Nueva_Columnad,Nueva_Columnae,Nueva_Columnaf,\
             Nueva_Columnag,Nueva_Columnah,Nueva_Columnai,Nueva_Columnaj,Nueva_Columnak,Nueva_Columnal,\
-            Nueva_Columnam,Nueva_Columnan,Nueva_Columnao,Nueva_Columnap,Nueva_Columnaq
+            Nueva_Columnam,Nueva_Columnan,Nueva_Columnao,Nueva_Columnap,Nueva_Columnaq,Nueva_Columnar,
+            Nueva_Columnas,Nueva_Columnat,Nueva_Columnau
             '''
         datasetname1 = illnes['datasetName'][0]
         datasetname2 = illnes['datasetName'][100]
@@ -202,11 +203,15 @@ def add_data(pacience):
         #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnac)
         #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnad)
         #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnae)
+        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnar)
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna2))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna3))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna4))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna5))
+        addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnas))
+        addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnat))
+        addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnau))
         logging.info(f"process completed for {Orgunits_name}")
 
             

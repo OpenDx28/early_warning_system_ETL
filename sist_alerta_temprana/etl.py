@@ -205,6 +205,13 @@ data['Nueva_Columnan'] = [hPOR1,hPOR2]
 data['Nueva_Columnao'] = [icuPOR1,icuPOR2]
 data['Nueva_Columnap'] = [activecases1,activecases2]
 data['Nueva_Columnaq'] = [PreActiveCases1,PreActiveCases2]
+data['Nueva_Columnar'] = [b1,b2]
+data['Nueva_Columnas'] = [vaginal_rate1,vaginal_rate2]
+data['Nueva_Columnat'] = [cesarean_rate1,cesarean_rate2]
+data['Nueva_Columnau'] = [weekend_surgical1,weekend_surgical2]
+
+
+
 '''
 
 con_data = rows_tolist(data)
