@@ -111,3 +111,5 @@ once inside in the metadata import section, you will see a window like this, now
 ![Datacon.csv](assets/meta.PNG)
 
 When we have finished we can see that several dashboards are loaded and we have some datasets, orgunit, dataelement, etc...
+
+- [Página de Inicio (index.html)](assets/index.html)
