@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>get_info &mdash; documentación de Proyecto itc_etl - 1.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4936afed"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto itc_etl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Módulos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto itc_etl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Código de módulo</a></li>
+      <li class="breadcrumb-item active">get_info</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Código fuente para get_info</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">current_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
+<span class="c1"># csv_path = &#39;C:/Users/esau/Desktop/ITC/Código/crono/dataelementymascosas.csv&#39;</span>
+<span class="c1"># csv_path = &#39;/app/dataorg.csv&#39; ##### Sustituido para la documentación con Sphinx</span>
+
+<span class="c1">##### Automatiza path</span>
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="c1"># Guarda el directorio de trabajo actual</span>
+<span class="n">cd_appi</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cwd</span><span class="p">,</span> <span class="s2">&quot;../&quot;</span><span class="p">)))</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cd_appi</span><span class="p">,</span> <span class="s1">&#39;dataorg.csv&#39;</span><span class="p">))</span> <span class="c1"># Unión de ruta con el archivo .CSV</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+
+<span class="n">illnes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+
+<div class="viewcode-block" id="addDataValue">
+<a class="viewcode-back" href="../modules.html#get_info.addDataValue">[documentos]</a>
+<span class="k">def</span> <span class="nf">addDataValue</span><span class="p">(</span><span class="n">DataSetName</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">OrgUnitName</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">DataValueSets</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Agrega valores de datos a un conjunto de datos en una unidad organizativa específica.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        DataSetName (str): Nombre del conjunto de datos al que se agregarán los valores.</span>
+<span class="sd">        OrgUnitName (str): Nombre de la unidad organizativa a la que se agregarán los valores.</span>
+<span class="sd">        DataValueSets (str): Conjunto de valores de datos en formato JSON.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="c1"># Obteniendo el ID del conjunto de datos para el payload</span>
+    <span class="n">DataSetLoaded</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">getDataSetInfoByName</span><span class="p">(</span><span class="n">DataSetName</span><span class="p">))</span>
+    <span class="n">DataSetId</span> <span class="o">=</span> <span class="n">DataSetLoaded</span><span class="p">[</span><span class="s1">&#39;dataSets&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">DataSetLoaded</span><span class="p">)</span>
+
+    <span class="c1"># Obteniendo el ID de la unidad organizativa para el payload</span>
+    <span class="n">OrgUnitLoaded</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">getOrgUnitInfoByName</span><span class="p">(</span><span class="n">OrgUnitName</span><span class="p">))</span>
+    <span class="n">OrgUnitId</span> <span class="o">=</span> <span class="n">OrgUnitLoaded</span><span class="p">[</span><span class="s1">&#39;organisationUnits&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">OrgUnitLoaded</span><span class="p">)</span>
+
+    <span class="c1"># Cambia registro (f&quot;[PROCESANDO DATOS] &gt;&gt; &quot; + &quot;Convirtiendo el nombre del elemento de datos a ID del elemento de datos&quot;)</span>
+    <span class="n">DataValueSets_loaded</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">DataValueSets</span><span class="p">)</span>
+    <span class="n">diccion</span> <span class="o">=</span> <span class="n">DataValueSets_loaded</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">payloads</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">fecha</span><span class="p">,</span> <span class="n">sub_diccionario</span> <span class="ow">in</span> <span class="n">diccion</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">sub_diccionario_lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">sub_diccionario</span><span class="p">]</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;dataSet&quot;</span><span class="p">:</span> <span class="n">DataSetId</span><span class="p">,</span>
+            <span class="s2">&quot;completeDate&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">current_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;period&quot;</span><span class="p">:</span> <span class="n">fecha</span><span class="p">,</span>
+            <span class="s2">&quot;orgUnit&quot;</span><span class="p">:</span> <span class="n">OrgUnitId</span><span class="p">,</span>
+            <span class="s2">&quot;dataValues&quot;</span><span class="p">:</span> <span class="n">sub_diccionario_lista</span>
+        <span class="p">}</span>
+        <span class="n">payloads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">payload</span> <span class="ow">in</span> <span class="n">payloads</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">session</span> <span class="o">=</span> <span class="n">login</span><span class="p">()</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8080/api/dataValueSets&quot;</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">})</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="add_data">
+<a class="viewcode-back" href="../modules.html#get_info.add_data">[documentos]</a>
+<span class="k">def</span> <span class="nf">add_data</span><span class="p">(</span><span class="n">pacientes</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Agrega datos a través de un conjunto de pacientes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pacientes (list): Una lista de pacientes con información específica.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">elementos</span> <span class="ow">in</span> <span class="n">pacientes</span><span class="p">:</span>
+        <span class="n">user</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dbname</span><span class="p">,</span> <span class="n">Hostname</span><span class="p">,</span> <span class="n">Facility_dhis2</span><span class="p">,</span> <span class="n">Orgunits</span><span class="p">,</span> <span class="n">ports</span><span class="p">,</span> <span class="n">Nueva_Columna</span> <span class="o">=</span> <span class="n">elementos</span>
+        <span class="n">datasetname</span> <span class="o">=</span> <span class="n">illnes</span><span class="p">[</span><span class="s1">&#39;datasetName&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">addDataValue</span><span class="p">(</span><span class="n">datasetname</span><span class="p">,</span> <span class="n">Orgunits</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">Nueva_Columna</span><span class="p">))</span></div>
+
+
+<span class="c1"># Obtener información sobre conjuntos de datos filtrados por nombre</span>
+<div class="viewcode-block" id="getDataSetInfoByName">
+<a class="viewcode-back" href="../modules.html#get_info.getDataSetInfoByName">[documentos]</a>
+<span class="k">def</span> <span class="nf">getDataSetInfoByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param name: nombre utilizado para filtrar conjuntos de datos</span>
+<span class="sd">    :return: Este método devuelve información básica sobre un conjunto de datos específico filtrado por id</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">login</span><span class="p">()</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://localhost:8080/api/dataSets.json?&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;name:like:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="c1"># Cambia registro (f&quot;[OBTENIENDO INFORMACIÓN DEL CONJUNTO DE DATOS] &gt;&gt; {response.text}&quot;)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+        <span class="c1"># Cambia registro(&quot;Excepción inesperada&quot;)</span>
+
+<span class="c1"># Obtener información sobre unidades organizativas filtradas por nombre</span>
+<div class="viewcode-block" id="getOrgUnitInfoByName">
+<a class="viewcode-back" href="../modules.html#get_info.getOrgUnitInfoByName">[documentos]</a>
+<span class="k">def</span> <span class="nf">getOrgUnitInfoByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param name: nombre utilizado para filtrar unidades organizativas</span>
+<span class="sd">    :return: Este método devuelve información básica sobre una unidad organizativa específica filtrada por id</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">login</span><span class="p">()</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://localhost:8080/api/organisationUnits.json?&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;name:like:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="c1"># Cambia registro (f&quot;[OBTENIENDO INFORMACIÓN DE UNIDAD ORGANIZATIVA] &gt;&gt; {response.text}&quot;)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+
+<span class="c1"># Obtener información sobre elementos de datos filtrados por nombre</span>
+<div class="viewcode-block" id="getDataElementInfoByName">
+<a class="viewcode-back" href="../modules.html#get_info.getDataElementInfoByName">[documentos]</a>
+<span class="k">def</span> <span class="nf">getDataElementInfoByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param name: nombre utilizado para filtrar elementos de datos</span>
+<span class="sd">    :return: Este método devuelve información básica sobre un elemento de datos específico filtrado por id</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">login</span><span class="p">()</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://localhost:8080/api/dataElements.json?&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;filter&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;name:like:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="c1"># Cambia registro (f&quot;[OBTENIENDO INFORMACIÓN DE ELEMENTO DE DATOS] &gt;&gt; {response.text}&quot;)</span>
+        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
+
+<span class="c1"># Cambia registro(&quot;Excepción inesperada&quot;)</span>
+
+<span class="c1"># Generar una sesión para realizar solicitudes</span>
+<div class="viewcode-block" id="login">
+<a class="viewcode-back" href="../modules.html#get_info.login">[documentos]</a>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;district&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">session</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Edosoft.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
