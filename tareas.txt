@@ -1,6 +1,0 @@
-crear los requeridos
-
-htmal  subirla en github
-
-excel seguimiento en check los indicadores que esten ene l codigo
-y en anotaciones expplicar porque no hemos podido sacar el indicador

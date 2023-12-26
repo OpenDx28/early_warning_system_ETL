@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulos &mdash; documentación de Proyecto itc_etl - 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Documentación técnica ITC_ETL" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Proyecto itc_etl
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Módulos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-connection">1. Conexión BBDD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connection.all_connec"><code class="docutils literal notranslate"><span class="pre">all_connec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connection.connect_to_gnu"><code class="docutils literal notranslate"><span class="pre">connect_to_gnu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-get_info">2. Info proyecto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.addDataValue"><code class="docutils literal notranslate"><span class="pre">addDataValue()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.add_data"><code class="docutils literal notranslate"><span class="pre">add_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getDataElementInfoByName"><code class="docutils literal notranslate"><span class="pre">getDataElementInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getDataSetInfoByName"><code class="docutils literal notranslate"><span class="pre">getDataSetInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.getOrgUnitInfoByName"><code class="docutils literal notranslate"><span class="pre">getOrgUnitInfoByName()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get_info.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#etl">3. ETL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-etl_functions">3.1 Funciones ETL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.accumulated"><code class="docutils literal notranslate"><span class="pre">accumulated()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.convertir_a_primer_dia_semana"><code class="docutils literal notranslate"><span class="pre">convertir_a_primer_dia_semana()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dict_in_list"><code class="docutils literal notranslate"><span class="pre">dict_in_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dict_payload"><code class="docutils literal notranslate"><span class="pre">dict_payload()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dict_to_list"><code class="docutils literal notranslate"><span class="pre">dict_to_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dictio_to_list"><code class="docutils literal notranslate"><span class="pre">dictio_to_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.div_ind"><code class="docutils literal notranslate"><span class="pre">div_ind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.dividir"><code class="docutils literal notranslate"><span class="pre">dividir()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_death"><code class="docutils literal notranslate"><span class="pre">info_death()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_disease"><code class="docutils literal notranslate"><span class="pre">info_disease()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_newborn"><code class="docutils literal notranslate"><span class="pre">info_newborn()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_registration"><code class="docutils literal notranslate"><span class="pre">info_registration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.info_surgery"><code class="docutils literal notranslate"><span class="pre">info_surgery()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.new_dict"><code class="docutils literal notranslate"><span class="pre">new_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.new_dict4"><code class="docutils literal notranslate"><span class="pre">new_dict4()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.new_dict_dupli"><code class="docutils literal notranslate"><span class="pre">new_dict_dupli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.percent_ind"><code class="docutils literal notranslate"><span class="pre">percent_ind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.percentmil_ind"><code class="docutils literal notranslate"><span class="pre">percentmil_ind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.porcentaje"><code class="docutils literal notranslate"><span class="pre">porcentaje()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.res_ind"><code class="docutils literal notranslate"><span class="pre">res_ind()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.rows_tolist"><code class="docutils literal notranslate"><span class="pre">rows_tolist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.sorteddict"><code class="docutils literal notranslate"><span class="pre">sorteddict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.sortedict"><code class="docutils literal notranslate"><span class="pre">sortedict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.sumar"><code class="docutils literal notranslate"><span class="pre">sumar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.three_dicts"><code class="docutils literal notranslate"><span class="pre">three_dicts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.to_week"><code class="docutils literal notranslate"><span class="pre">to_week()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.trans_dict"><code class="docutils literal notranslate"><span class="pre">trans_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.transf_dict"><code class="docutils literal notranslate"><span class="pre">transf_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl_functions.weekly"><code class="docutils literal notranslate"><span class="pre">weekly()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main">4. Main</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Proyecto itc_etl</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Módulos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modulos">
+<h1>Módulos<a class="headerlink" href="#modulos" title="Enlace permanente a este encabezado"></a></h1>
+<section id="module-connection">
+<span id="conexion-bbdd"></span><h2>1. Conexión BBDD<a class="headerlink" href="#module-connection" title="Enlace permanente a este encabezado"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="connection.all_connec">
+<span class="sig-prename descclassname"><span class="pre">connection.</span></span><span class="sig-name descname"><span class="pre">all_connec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modelos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/connection.html#all_connec"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#connection.all_connec" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Realiza conexiones a múltiples bases de datos GNU Health y obtiene registros de modelos específicos.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connections</strong> (<em>list</em>) – Una lista de tuplas que contienen información de conexión para cada base de datos.</p></li>
+<li><p><strong>modelos</strong> (<em>list</em>) – Una lista de nombres de modelos de los que se desean obtener registros.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista que contiene registros de modelos para cada conexión realizada.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="connection.connect_to_gnu">
+<span class="sig-prename descclassname"><span class="pre">connection.</span></span><span class="sig-name descname"><span class="pre">connect_to_gnu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dbname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hostname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/connection.html#connect_to_gnu"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#connection.connect_to_gnu" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Establece una conexión a una base de datos GNU Health.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user</strong> (<em>str</em>) – Nombre de usuario para la conexión.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Contraseña para la conexión.</p></li>
+<li><p><strong>dbname</strong> (<em>str</em>) – Nombre de la base de datos.</p></li>
+<li><p><strong>hostname</strong> (<em>str</em>) – Nombre del host o dirección IP del servidor.</p></li>
+<li><p><strong>port</strong> (<em>str</em>) – Puerto para la conexión.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Objeto de configuración para la conexión establecida.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>config</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-get_info">
+<span id="info-proyecto"></span><h2>2. Info proyecto<a class="headerlink" href="#module-get_info" title="Enlace permanente a este encabezado"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.addDataValue">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">addDataValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DataSetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OrgUnitName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DataValueSets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#addDataValue"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.addDataValue" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Agrega valores de datos a un conjunto de datos en una unidad organizativa específica.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DataSetName</strong> (<em>str</em>) – Nombre del conjunto de datos al que se agregarán los valores.</p></li>
+<li><p><strong>OrgUnitName</strong> (<em>str</em>) – Nombre de la unidad organizativa a la que se agregarán los valores.</p></li>
+<li><p><strong>DataValueSets</strong> (<em>str</em>) – Conjunto de valores de datos en formato JSON.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.add_data">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">add_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pacientes</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#add_data"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.add_data" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Agrega datos a través de un conjunto de pacientes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pacientes</strong> (<em>list</em>) – Una lista de pacientes con información específica.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getDataElementInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getDataElementInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getDataElementInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getDataElementInfoByName" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar elementos de datos</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre un elemento de datos específico filtrado por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getDataSetInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getDataSetInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getDataSetInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getDataSetInfoByName" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar conjuntos de datos</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre un conjunto de datos específico filtrado por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.getOrgUnitInfoByName">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">getOrgUnitInfoByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#getOrgUnitInfoByName"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.getOrgUnitInfoByName" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – nombre utilizado para filtrar unidades organizativas</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Este método devuelve información básica sobre una unidad organizativa específica filtrada por id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_info.login">
+<span class="sig-prename descclassname"><span class="pre">get_info.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/get_info.html#login"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#get_info.login" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="etl">
+<h2>3. ETL<a class="headerlink" href="#etl" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+<section id="module-etl_functions">
+<span id="funciones-etl"></span><h2>3.1 Funciones ETL<a class="headerlink" href="#module-etl_functions" title="Enlace permanente a este encabezado"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.accumulated">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">accumulated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#accumulated"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.accumulated" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Calcula el total acumulado de cantidades para cada fecha dentro de cada enfermedad en un diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – El diccionario que contiene enfermedades como claves y diccionarios de fechas y cantidades asociadas.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario con los totales acumulados para cada fecha dentro de cada enfermedad.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.convertir_a_primer_dia_semana">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">convertir_a_primer_dia_semana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fecha</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#convertir_a_primer_dia_semana"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.convertir_a_primer_dia_semana" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte una fecha dada al primer día de la semana correspondiente en el formato «YYYY-Www».</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fecha</strong> (<em>str</em>) – La fecha en formato «YYYY-MM-DD» que se desea convertir.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La fecha convertida en formato «YYYY-Www».</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dict_in_list">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dict_in_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nuevo_diccionario</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dict_in_list"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dict_in_list" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario en una lista.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nuevo_diccionario</strong> (<em>dict</em>) – Un diccionario que se desea convertir en una lista.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista que contiene el diccionario como su único elemento.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dict_payload">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dict_payload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">morta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dict_payload"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dict_payload" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Transforma datos de mortalidad en un diccionario que cuenta las fechas por enfermedad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>muertes</strong> (<em>list</em>) – Una lista de tuplas que contiene información sobre fechas y enfermedades.</p></li>
+<li><p><strong>lista_valores_unicos</strong> (<em>list</em>) – Una lista de valores únicos de enfermedades.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Un diccionario donde las claves son las enfermedades y los valores son diccionarios que cuentan</dt><dd><p>las fechas correspondientes a cada enfermedad.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dict_to_list">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dict_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_illnes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dict_to_list"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dict_to_list" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario de datos en un nuevo formato específico, agrupando por fechas y enfermedades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list_illnes</strong> (<em>list</em>) – Lista de enfermedades.</p></li>
+<li><p><strong>vector</strong> (<em>dict</em>) – Diccionario que asocia enfermedades con sus valores.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de diccionarios en un formato específico, agrupando por fechas y enfermedades.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dictio_to_list">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dictio_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_illnes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dictio_to_list"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dictio_to_list" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario de datos en un formato específico, agrupando por fechas y enfermedades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list_illnes</strong> (<em>list</em>) – Lista de enfermedades.</p></li>
+<li><p><strong>vector</strong> (<em>dict</em>) – Diccionario que asocia enfermedades con sus valores.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de listas de diccionarios en un formato específico, agrupando por fechas y enfermedades.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.div_ind">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">div_ind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#div_ind"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.div_ind" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Realiza la operación de división entre los valores de dos diccionarios para fechas comunes y agrega fechas exclusivas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic1</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como numerador para la operación de división.</p></li>
+<li><p><strong>dic2</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como denominador para la operación de división.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa el resultado de la división para fechas comunes y las fechas exclusivas.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.dividir">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">dividir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ejemplo1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ejemplo2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#dividir"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.dividir" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Divide las cantidades de un diccionario por las cantidades correspondientes de otro diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ejemplo1</strong> (<em>dict</em>) – El diccionario cuyas cantidades se dividirán.</p></li>
+<li><p><strong>ejemplo2</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como divisor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa el resultado de la división de cantidades.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_death">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_death</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">records</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_death"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_death" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene información sobre las muertes, incluyendo la fecha de defunción y la causa de la muerte.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>recor</strong> (<em>list</em>) – Una lista de registros que contienen información sobre defunciones.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de tuplas, donde cada tupla contiene la fecha de defunción y la causa de la muerte.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_disease">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_disease</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_disease"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_disease" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene información sobre enfermedades, incluyendo la fecha de diagnóstico y la patología asociada.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>record</strong> (<em>list</em>) – Una lista de registros que contienen información sobre enfermedades.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Una tupla de tres listas, donde la primera lista contiene información sobre enfermedades confirmadas,</dt><dd><p>la segunda lista contiene información sobre enfermedades sospechosas y la tercera lista contiene
+información sobre enfermedades recuperadas.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_newborn">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_newborn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_newborn"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_newborn" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene información sobre los nacimientos, incluyendo la fecha de registro.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>recor</strong> (<em>list</em>) – Una lista de registros que contienen información sobre nacimientos.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Una tupla de tres listas, donde la primera lista contiene información sobre los embarazos a</dt><dd><p>término,la segunda lista contiene información sobre los nacimientos vivos y la tercera lista
+contiene información sobre los nacimientos fallecidos.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_registration">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_registration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_registration"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_registration" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene información sobre las hospitalizaciones y las altas, incluyendo la fecha de registro.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>recor</strong> (<em>list</em>) – Una lista de registros que contienen información sobre hospitalizaciones y altas.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Una tupla de cuatro listas, donde la primera lista contiene información sobre camas ocupadas,</dt><dd><p>la segunda lista contiene información sobre camas ocupadas en UCI, la tercera lista contiene
+información sobre altas hospitalarias y la tercera lista contiene información sobre altas de
+atención primaria.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.info_surgery">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">info_surgery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#info_surgery"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.info_surgery" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Obtiene información sobre las cirugías, incluyendo la fecha de registro.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>recor</strong> (<em>list</em>) – Una lista de registros que contienen información sobre cirugías.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Una tupla de tres listas, donde la primera lista contiene información sobre el total de cirugías,</dt><dd><p>la segunda lista contiene información sobre la mortalidad en cirugías y la tercera lista contiene
+información sobre las cirugías exitosas.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.new_dict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">new_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicc_act</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#new_dict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.new_dict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Transforma un diccionario de conteo en un nuevo diccionario con un formato específico.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dicc_act</strong> (<em>dict</em>) – Un diccionario que contiene información de conteo.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario con un formato particular.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.new_dict4">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">new_dict4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicc_act</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#new_dict4"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.new_dict4" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario de datos en un nuevo formato específico, agrupando por fechas y enfermedades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dicc_act</strong> (<em>dict</em>) – El diccionario original que contiene enfermedades como claves y diccionarios de fechas y cantidades asociadas.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de diccionarios en un formato específico, agrupando por fechas y enfermedades.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.new_dict_dupli">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">new_dict_dupli</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dicc_act</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#new_dict_dupli"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.new_dict_dupli" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario de datos en un nuevo formato específico, agrupando por fechas y enfermedades.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dicc_act</strong> (<em>dict</em>) – El diccionario original que contiene enfermedades como claves y diccionarios de fechas y cantidades asociadas.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de diccionarios en un formato específico, agrupando por fechas y enfermedades.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.percent_ind">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">percent_ind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#percent_ind"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.percent_ind" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Calcula el porcentaje de los valores de un diccionario en relación con los valores correspondientes de otro diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic1</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como numerador para calcular el porcentaje.</p></li>
+<li><p><strong>dic2</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como denominador para calcular el porcentaje.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa el resultado del cálculo de porcentajes.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.percentmil_ind">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">percentmil_ind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#percentmil_ind"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.percentmil_ind" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Calcula el porcentaje de los valores de un diccionario en relación con los valores correspondientes de otro diccionario,
+multiplicando el resultado por 1000.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic1</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como numerador para calcular el porcentaje.</p></li>
+<li><p><strong>dic2</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como denominador para calcular el porcentaje.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa el resultado del cálculo de porcentajes multiplicado por 1000.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.porcentaje">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">porcentaje</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ejemplo1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ejemplo2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#porcentaje"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.porcentaje" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Calcula el porcentaje de las cantidades de un diccionario en relación con las cantidades de otro diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ejemplo1</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como numerador para calcular el porcentaje.</p></li>
+<li><p><strong>ejemplo2</strong> (<em>dict</em>) – El diccionario cuyas cantidades se utilizarán como denominador para calcular el porcentaje.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa el resultado del cálculo de porcentajes.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.res_ind">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">res_ind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#res_ind"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.res_ind" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Resta los valores de dos diccionarios para las fechas comunes y agrega las fechas exclusivas de cada diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic1</strong> (<em>dict</em>) – Primer diccionario que contiene fechas como claves y valores asociados.</p></li>
+<li><p><strong>dic2</strong> (<em>dict</em>) – Segundo diccionario que contiene fechas como claves y valores asociados.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa la suma de valores para las fechas comunes y las fechas exclusivas.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.rows_tolist">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">rows_tolist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#rows_tolist"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.rows_tolist" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un DataFrame en una lista de listas, donde cada sublista representa una fila del DataFrame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>datos</strong> (<em>DataFrame</em>) – El DataFrame que se desea convertir.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Una lista de listas, donde cada sublista representa una fila del DataFrame.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.sorteddict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">sorteddict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#sorteddict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.sorteddict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Ordena un diccionario por claves y devuelve un nuevo diccionario ordenado.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>dict</em>) – El diccionario que se desea ordenar.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario ordenado por claves.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.sortedict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">sortedict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#sortedict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.sortedict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Ordena las fechas dentro de cada enfermedad de un diccionario.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – El diccionario que contiene enfermedades como claves y diccionarios de fechas y cantidades asociadas.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario con las fechas ordenadas para cada enfermedad.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.sumar">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">sumar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ejemplo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ejemplo2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#sumar"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.sumar" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Combina dos diccionarios anidados sumando las cantidades correspondientes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ejemplo</strong> (<em>dict</em>) – El primer diccionario que contiene datos a sumar.</p></li>
+<li><p><strong>ejemplo2</strong> (<em>dict</em>) – El segundo diccionario que contiene datos a sumar.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa la suma de los datos de los dos diccionarios.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.three_dicts">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">three_dicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dic1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dic3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#three_dicts"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.three_dicts" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Realiza operaciones de resta entre tres diccionarios para fechas comunes y agrega fechas exclusivas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dic1</strong> (<em>dict</em>) – Primer diccionario que contiene fechas como claves y valores asociados.</p></li>
+<li><p><strong>dic2</strong> (<em>dict</em>) – Segundo diccionario que contiene fechas como claves y valores asociados.</p></li>
+<li><p><strong>dic3</strong> (<em>dict</em>) – Tercer diccionario que contiene fechas como claves y valores asociados.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario que representa la resta de los valores para fechas comunes y las fechas exclusivas.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.to_week">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">to_week</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#to_week"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.to_week" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Convierte un diccionario de fechas y valores en un nuevo diccionario con fechas agrupadas por semana.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a</strong> (<em>dict</em>) – Un diccionario que contiene fechas como claves y valores asociados.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nuevo diccionario con fechas agrupadas por semana en el formato “YYYY-Www” y valores sumados.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.trans_dict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">trans_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">muertes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista_valores_unicos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#trans_dict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.trans_dict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Transforma datos de muertes en un diccionario que cuenta las fechas por enfermedad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>muertes</strong> (<em>list</em>) – Una lista de tuplas que contiene información sobre fechas y enfermedades.</p></li>
+<li><p><strong>lista_valores_unicos</strong> (<em>list</em>) – Una lista de valores únicos de enfermedades.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Un diccionario donde las claves son las enfermedades y los valores son diccionarios que cuentan</dt><dd><p>las fechas correspondientes a cada enfermedad.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.transf_dict">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">transf_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">surg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#transf_dict"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.transf_dict" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Transforma datos de cirugías en un diccionario que cuenta las fechas por enfermedad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>surg</strong> (<em>list</em>) – Una lista de tuplas que contiene información sobre fechas y enfermedades.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Un diccionario donde las claves son las enfermedades y los valores son diccionarios que cuentan</dt><dd><p>las fechas correspondientes a cada enfermedad.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="etl_functions.weekly">
+<span class="sig-prename descclassname"><span class="pre">etl_functions.</span></span><span class="sig-name descname"><span class="pre">weekly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ok</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/etl_functions.html#weekly"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#etl_functions.weekly" title="Enlazar permanentemente con esta definición"></a></dt>
+<dd><p>Agrupa las fechas por semana y suma los valores correspondientes para cada enfermedad.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ok</strong> (<em>dict</em>) – Un diccionario que contiene información de enfermedades con fechas y valores asociados.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un diccionario modificado con las fechas agrupadas por semana y los valores sumados.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="main">
+<h2>4. Main<a class="headerlink" href="#main" title="Enlace permanente a este encabezado"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentación técnica ITC_ETL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2023, Edosoft.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
