@@ -1,4 +1,0 @@
-proteus 
-pandas 
-Faker 
-requests
