@@ -89,11 +89,11 @@ d1 = dictio_to_list(resultj,weekly(sortedict(trans_dict(deathill1, names_illnes)
 d2 = dictio_to_list(resultj,weekly(sortedict(trans_dict(deathill2, names_illnes))))
 logging.info(f"D")
 
+'''
 b1 = dictio_to_list(resultt,weekly(sortedict(trans_dict(ocu1, names_illnes))))
 b2 = dictio_to_list(resultt,weekly(sortedict(trans_dict(ocu2, names_illnes))))
 logging.info(f"B")
 
-'''
 
 DailyConfirmedt1 = dictio_to_list(result2,trans_dict(dise1_c, names_illnes))
 DailyConfirmedt2 = dictio_to_list(result2,trans_dict(dise2_c, names_illnes))
@@ -209,9 +209,6 @@ data['Nueva_Columnar'] = [b1,b2]
 data['Nueva_Columnas'] = [vaginal_rate1,vaginal_rate2]
 data['Nueva_Columnat'] = [cesarean_rate1,cesarean_rate2]
 data['Nueva_Columnau'] = [weekend_surgical1,weekend_surgical2]
-
-
-
 '''
 
 con_data = rows_tolist(data)
