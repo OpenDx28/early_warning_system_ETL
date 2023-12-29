@@ -112,5 +112,10 @@ once inside in the metadata import section, you will see a window like this, now
 
 When we have finished we can see that several dashboards are loaded and we have some datasets, orgunit, dataelement, etc...
 
+
+## Extra documentation(HTML)
+
+Finally, documentation on scripts, functions and code variables has been uploaded in various html.
+to be able to visualize it, click on the home page and the readme opens again, go down to the end and enter in the index of the html.
+
 - [Home Page (index.html)](assets/index.html)
-- [Modules (modules.html)](assets/modules.html)
