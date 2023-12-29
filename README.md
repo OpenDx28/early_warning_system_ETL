@@ -112,4 +112,5 @@ once inside in the metadata import section, you will see a window like this, now
 
 When we have finished we can see that several dashboards are loaded and we have some datasets, orgunit, dataelement, etc...
 
-- [Página de Información](https://opendx28.github.io/early_warning_system_ETL/)
+- [Home Page (index.html)](assets/index.html)
+- [Modules (modules.html)](assets/modules.html)
