@@ -46,6 +46,9 @@ resultq = list (illnes.loc[illnes['dataelement'] == 'Cesarean rate', 'uid'])
 resultr = list (illnes.loc[illnes['dataelement'] == 'Vaginal rate', 'uid'])
 results = list (illnes.loc[illnes['dataelement'] == 'weekend surgical', 'uid'])
 resultt = list (illnes.loc[illnes['dataelement'] == 'B', 'uid'])
+resultu = list (illnes.loc[illnes['dataelement'] == 'Episodes surgery', 'uid'])
+resultx = list (illnes.loc[illnes['dataelement'] == 'Turnover index', 'uid'])
+resultz = list (illnes.loc[illnes['dataelement'] == 'Average stay', 'uid'])
 
 def login():
     session = requests.Session()
@@ -167,14 +170,15 @@ def add_data(pacience):
     for elementos in pacience:
         user, password, DDBB_name, Hostname, Orgunits_code, Orgunits_name, ports, dhis2_name, dhis2_port,\
         Nueva_Columna, Nueva_Columna2, Nueva_Columna3, Nueva_Columna4, Nueva_Columna5,Nueva_Columna8,\
-        Nueva_Columnag = elementos
+        Nueva_Columnag, Nueva_Columnas, Nueva_Columnat, Nueva_Columnau,Nueva_Columnaw = elementos
         '''
         Nueva_Columna,\
             Nueva_Columna2,Nueva_Columna3,Nueva_Columna4,Nueva_Columna5,Nueva_Columna6,Nueva_Columna7,\
             Nueva_Columna8,Nueva_Columna9,Nueva_Columnaa,Nueva_Columnab,Nueva_Columnac,Nueva_Columnad,Nueva_Columnae,Nueva_Columnaf,\
             Nueva_Columnag,Nueva_Columnah,Nueva_Columnai,Nueva_Columnaj,Nueva_Columnak,Nueva_Columnal,\
             Nueva_Columnam,Nueva_Columnan,Nueva_Columnao,Nueva_Columnap,Nueva_Columnaq,Nueva_Columnar,
-            Nueva_Columnas,Nueva_Columnat,Nueva_Columnau
+            Nueva_Columnas,Nueva_Columnat,Nueva_Columnau,Nueva_Columnaw,Nueva_Columnay,
+            Nueva_Columnaz
             '''
         datasetname1 = illnes['datasetName'][0]
         datasetname2 = illnes['datasetName'][100]
@@ -198,12 +202,12 @@ def add_data(pacience):
         #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna7)
         valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna8)
         #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columna9)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaa)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnab)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnac)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnad)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnae)
-        #valuedata(datasetname1, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnar)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnaa)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnab)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnac)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnad)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnae)
+        #valuedata(datasetname2, Orgunits_name, dhis2_name, str(dhis2_port), Nueva_Columnar)
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna2))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columna3))
@@ -212,6 +216,9 @@ def add_data(pacience):
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnas))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnat))
         addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnau))
+        #addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnaw))
+        #addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnay))
+        #addDataValue(datasetname3, Orgunits_name, dhis2_name, str(dhis2_port), json.dumps(Nueva_Columnaz))
         logging.info(f"process completed for {Orgunits_name}")
 
             

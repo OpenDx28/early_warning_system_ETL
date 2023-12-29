@@ -41,8 +41,11 @@ def info_registration(recor):
     dish = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.state != 'hospitalized']
     dispc = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.discharge_reason == 'Home']
     ocu = [(rec.discharge_date, rec.admission_reason.name) for rec in recor if rec.bed.state == 'occupied']
-    
-    return bedh, bedicu, dish, dispc,ocu
+    tuover = [(rec.hospitalization_date) for rec in recor]
+    esta = [(rec.discharge_date, rec.hospitalization_date, (rec.discharge_date - rec.hospitalization_date).days) for rec
+            in recor]
+
+    return bedh, bedicu, dish, dispc,ocu,tuover,esta
 
 
 def info_newborn(recor):
@@ -61,7 +64,7 @@ def info_surgery(recor):
     surg = [rec.surgery_end_date for rec in recor]
     surgdied = [rec.surgery_end_date for rec in recor if rec.clavien_dindo != 'grade1']
     surgalive = [rec.surgery_end_date for rec in recor if rec.clavien_dindo == 'grade1']
-    weekend_surg = [ date for date in surg1 if date.weekday() in [5, 6]]
+    weekend_surg = [ date for date in surg if date.weekday() in [5, 6]]
     weekend_surgalive = [ date for date in surgalive if date.weekday() in [5, 6]]
     return surg, surgdied, surgalive, weekend_surg, weekend_surgalive 
 
@@ -223,7 +226,80 @@ def sumar_tres_diccionarios(ejemplo1, ejemplo2, ejemplo3):
     return resultado
 
 
+def transformar_lista(fechas, elemen):
+    resultado = []
+    contador_fechas = {}
 
+    for fecha in fechas:
+        year, week, _ = fecha.isocalendar()
+        clave = f'{year}W{week:02}'
+
+        if clave in contador_fechas:
+            contador_fechas[clave] += 1
+        else:
+            contador_fechas[clave] = 1
+
+        elemento_existente = next((elem for elem in resultado if clave in elem), None)
+
+        if elemento_existente:
+            elemento_existente[clave]['value'] = contador_fechas[clave]
+        else:
+            elemento = {clave: {'dataElement': elemen, 'value': contador_fechas[clave]}}
+            resultado.append(elemento)
+
+    return resultado
+
+
+def transfor(esta,elemen):
+    sorted_date_differences = sorted(esta, key=lambda x: x[0])
+    accumulated_list = [(tupla[0], tupla[1], sum(item[2] for item in sorted_date_differences[:i + 1])) for i, tupla in
+                        enumerate(sorted_date_differences)]
+    result_list = [(tupla[0], tupla[2]) for tupla in accumulated_list]
+    formatted_result_list = [(date.strftime('%YW%W'), value) for date, value in result_list]
+    max_value_dict = {}
+
+    # Calcular el valor más alto por semana
+    for week, value in formatted_result_list:
+        if week in max_value_dict:
+            max_value_dict[week] = max(max_value_dict[week], value)
+        else:
+            max_value_dict[week] = value
+
+    # Crear una nueva lista con el valor más alto por semana
+    # Convertir el diccionario a la estructura deseada
+    result_list = [{week: {'dataElement': elemen, 'value': float(max_value)}} for week, max_value in
+                   max_value_dict.items()]
+
+    return result_list
+
+def stay(result_list,abc,elemen):
+    resultados = []
+
+    # Crear diccionarios para facilitar la búsqueda de fechas en ambas listas
+    diccionario_lista1 = {list(d.keys())[0]: d for d in result_list}
+    diccionario_lista2 = {list(d.keys())[0]: d for d in abc}
+
+    # Obtener todas las fechas únicas
+    fechas_unicas = set(diccionario_lista1.keys()).union(diccionario_lista2.keys())
+
+    # Iterar sobre todas las fechas y calcular los resultados
+    for fecha in fechas_unicas:
+        valor1 = diccionario_lista1.get(fecha, {}).get(fecha, {}).get('value', 1)
+        valor2 = diccionario_lista2.get(fecha, {}).get(fecha, {}).get('value', 1)
+
+        resultado = {fecha: {'dataElement': elemen, 'value': valor1 / valor2}}
+        resultados.append(resultado)
+    lista_original = sorted(resultados, key=lambda x: list(x.keys())[0])
+    diccionario_grande = {}
+
+    for diccionario_pequeno in lista_original:
+        diccionario_grande.update(diccionario_pequeno)
+
+
+    lista_resultante = [diccionario_grande]
+
+    lista_resultante
+    return lista_resultante
 
 def res_ind(dic1,dic2):
     # Crear un nuevo diccionario para almacenar la suma de los valores por fecha

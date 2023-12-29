@@ -34,8 +34,8 @@ dise1_c,dise1_s,dise1_r = info_disease(dise1)
 dise2_c,dise2_s,dise2_r = info_disease(dise2)
 
 
-bedh1,bedicu1,dish1,dispc1,ocu1 = info_registration(reg1)
-bedh2,bedicu2,dish2,dispc2,ocu2 = info_registration(reg2)
+bedh1,bedicu1,dish1,dispc1,ocu1,tuover1,esta1 = info_registration(reg1)
+bedh2,bedicu2,dish2,dispc2,ocu2,tuover2,esta2 = info_registration(reg2)
 '''
 newb1,newbdied1,born1,cae1, vag1 = info_newborn(new1)
 newb2,newbdied2,born2,cae2, vag2 = info_newborn(new2)
@@ -55,6 +55,20 @@ logging.info(f"morta_surgical")
 index_surgery1 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(surg1))),to_week(sorteddict(transf_dict(surg1)))),resulto[0]))
 index_surgery2 = dict_in_list(dict_payload(percent_ind(to_week(sorteddict(transf_dict(surg2))),to_week(sorteddict(transf_dict(surg2)))),resulto[0]))
 logging.info(f"index_surgery")
+
+episode_surgery1 = dict_in_list(dict_payload(to_week(sorteddict(transf_dict(surg1))),resultu[0]))
+episode_surgery2 = dict_in_list(dict_payload(to_week(sorteddict(transf_dict(surg1))),resultu[0]))
+logging.info(f"episode_surgery")
+
+'''
+turnover1 = dict_in_list(dict_payload(div_ind(to_week(sorteddict(transf_dict(tuover1))),to_week(sorteddict(transf_dict(bedh1)))),resultx[0]))
+turnover2 = dict_in_list(dict_payload(div_ind(to_week(sorteddict(transf_dict(tuover2))),to_week(sorteddict(transf_dict(bedh2)))),resultx[0]))
+logging.info(f"turnover")
+
+average1 = stay(transfor(esta1,resultz[0]),transformar_lista(tuover1,resultz[0]),resultz[0])
+average2 = stay(transfor(esta2,resultz[0]),transformar_lista(tuover2,resultz[0]),resultz[0])
+logging.info(f"average")
+'''
 
 weekend_surgical1 = dict_in_list(dict_payload(div_ind(res_ind(to_week(sorteddict(transf_dict(weekend_surg1))),to_week(sorteddict(transf_dict(weekend_surgalive1)))),to_week(sorteddict(transf_dict(weekend_surg1)))),results[0]))
 weekend_surgical2 = dict_in_list(dict_payload(div_ind(res_ind(to_week(sorteddict(transf_dict(weekend_surg2))),to_week(sorteddict(transf_dict(weekend_surgalive2)))),to_week(sorteddict(transf_dict(weekend_surg2)))),results[0]))
@@ -206,9 +220,13 @@ data['Nueva_Columnao'] = [icuPOR1,icuPOR2]
 data['Nueva_Columnap'] = [activecases1,activecases2]
 data['Nueva_Columnaq'] = [PreActiveCases1,PreActiveCases2]
 data['Nueva_Columnar'] = [b1,b2]
+'''
 data['Nueva_Columnas'] = [vaginal_rate1,vaginal_rate2]
 data['Nueva_Columnat'] = [cesarean_rate1,cesarean_rate2]
 data['Nueva_Columnau'] = [weekend_surgical1,weekend_surgical2]
-'''
+data['Nueva_Columnaw'] = [episode_surgery1,episode_surgery2]
+
+#data['Nueva_Columnay'] = [turnover1,turnover2]
+#data['Nueva_Columnaz'] = [average1,average2]
 
 con_data = rows_tolist(data)
