@@ -1,17 +1,18 @@
-# Usa una imagen base de Python 3.9
-FROM python:3.9
-
-# Establece el directorio de trabajo en /app
+FROM python:3-alpine
 WORKDIR /app
 
-# Copia todos los archivos desde el host al contenedor
 COPY sist_alerta_temprana /app/sist_alerta_temprana/
+COPY requirements.txt . 
 
-# Copia el archivo requirements.txt al contenedor
-COPY requirements.txt /app/
+RUN apk add apk-cron && \
+    chmod +x ./sist_alerta_temprana/main.py && \
+    pip install -r requirements.txt && \ 
+    touch /var/run/crond.pid && \
+    touch /var/log/cron.log
 
-# Instala las bibliotecas necesarias
-RUN pip install -r requirements.txt
-
-# Comando por defecto para ejecutar el contenedor
-CMD ["tail", "-f", "/dev/null"]
+COPY app.sh /app/
+RUN chmod 777 /app/app.sh
+RUN crontab -l | { cat; printf "0 * * * * sh /app/app.sh\n"; } | crontab -
+# ----
+COPY entrypoint.sh /app
+ENTRYPOINT exec sh /app/entrypoint.sh 
