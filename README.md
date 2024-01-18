@@ -112,6 +112,11 @@ once inside in the metadata import section, you will see a window like this, now
 
 When we have finished we can see that several dashboards are loaded and we have some datasets, orgunit, dataelement, etc...
 
+## Necesary action after import data from ghnuHealth
+
+in dhis2 go to Data Administration
+Analytics table and click on start export
+
 
 ## Extra documentation(HTML)
 

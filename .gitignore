@@ -1,1 +1,6 @@
 volumes/
+*.log
+
+.idea/
+
+sist_alerta_temprana/__pycache__/

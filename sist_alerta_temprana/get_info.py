@@ -4,11 +4,12 @@ import json
 import pandas as pd
 import logging
 from logging_utils import setup_logging
+from main import PATH
 
 setup_logging()
 current_date = datetime.now().date()
 
-csv_path = '/app/sist_alerta_temprana/dataorg.csv'
+csv_path = PATH + 'dataorg.csv'
 illnes = pd.read_csv(csv_path)
 
 #names_illnes = list(illnes['name'])

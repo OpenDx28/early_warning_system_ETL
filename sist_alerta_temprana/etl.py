@@ -1,12 +1,12 @@
 from get_info import *
 from connection import *
 from etl_functions import *
-
+from main import PATH
 setup_logging()
 
 current_date = datetime.now().date()
 #Ruta al archivo CSV dentro del contenedor
-csv_path = '/app/sist_alerta_temprana/datacon.csv'
+csv_path = PATH + 'datacon.csv'
 data = pd.read_csv(csv_path)
 
 modelos = ['gnuhealth.death_certificate','gnuhealth.patient.disease',
